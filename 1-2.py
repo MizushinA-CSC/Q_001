@@ -3,6 +3,7 @@
 # (2) i回の追加において、与える"a"の個数はp(i)と表される
 # (3) "a"を末尾に追加する前に、必ず" "(半角スペース)が加えられる
 # (4) "a"の追加は、0以上とする
+import sys
 
 # 標準入力
 S = str(input())
@@ -11,8 +12,12 @@ p = list(map(int, input().split()))
 
 # 標準入力の代わり
 #S: str = "Snorlax"
-#N: int = 3
+#N: int = 101
 #p = [3, 2, 5]
+
+if(N < 1 or N > 100):
+    print("Error：不適切な値が入力されました")
+    sys.exit()
 
 for i in range(0, N):
     S += " "
